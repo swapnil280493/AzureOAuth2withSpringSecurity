@@ -1,0 +1,21 @@
+spring:
+  security:
+    oauth2:
+      client:
+        provider:
+          azuread:
+           authorization-uri: https://login.microsoftonline.com/oauth2/v2.0/authorize
+           token-uri: https://login.microsoftonline.com/oauth2/v2.0/token
+           jwk-set-uri: https://login.microsoftonline.com/common/discovery/v2.0/keys   
+        registration:
+          azure-client:
+           provider: azuread
+           client-id: 
+           client-secret: 
+           authorization-grant-type: authorization_code  
+           redirect-uri: 'http://localhost:8080/'
+           scope: openid,profile
+server:
+  forward-headers-strategy: native
+
+     
