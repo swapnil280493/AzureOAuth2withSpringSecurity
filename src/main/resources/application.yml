@@ -1,21 +1,12 @@
 spring:
-  security:
-    oauth2:
-      client:
-        provider:
-          azuread:
-           authorization-uri: https://login.microsoftonline.com/oauth2/v2.0/authorize
-           token-uri: https://login.microsoftonline.com/oauth2/v2.0/token
-           jwk-set-uri: https://login.microsoftonline.com/common/discovery/v2.0/keys   
-        registration:
-          azure-client:
-           provider: azuread
-           client-id: 
-           client-secret: 
-           authorization-grant-type: authorization_code  
-           redirect-uri: 'http://localhost:8080/'
-           scope: openid,profile
-server:
-  forward-headers-strategy: native
-
+  cloud:
+    azure:
+      active-directory:
+        enabled: true
+        profile:
+          tenant-id: 1f4beacd-b7aa-49b2-aaa1-b8525cb257e0
+        credential:
+          client-id: 5ae4df3e-a3ca-4bbd-a330-a52feb8bbbf0
+          client-secret: ihE8Q~WVY~U5ais~-Axh-RG0CWRKkBUWaBNu8boL
+        
      
